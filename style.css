@@ -1,0 +1,210 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://www.medianama.com/wp-content/uploads/2022/07/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Search Bar */
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#movie-search {
+    padding: 12px;
+    width: 300px;
+    border-radius: 65px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#search-button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #e14e1b;
+}
+
+/* Featured Movies */
+
+.featured-movies {
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.featured-movies h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.movie-grid-container {
+    height: 50vh; /* Controls height of grid area */
+    overflow-y: auto; /* Enables scrolling for the grid */
+    width: 100%;
+}
+
+
+.movie-grid {
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.movie-card {
+    background: #272727;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.movie-info p {
+    font-size: 0.9rem;
+    color: #ffcc00;
+}
+
+
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1;
+    }
+
+    #movie-search {
+        width: auto;
+    }
+
+    nav ul li {
+        margin-left: 4.9px;
+    }
+    
+
+    .search-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #search-button {
+        width: auto;
+        margin-left: 10;
+        margin-top: 5px;
+    }
+
+    .movie-card img {
+        height: auto;
+    }
+    .movie-grid{
+        grid-template-columns: 1fr;
+    }
+    .overlay {
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+        height: auto;
+        color: white;
+        text-align: center;
+        display: flex;
+
+    }
+    .hero {
+        height: 10;
+        width: auto;
+        background: url('https://www.medianama.com/wp-content/uploads/2022/07/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg') no-repeat center center/cover;
+        position: relative;
+    }
+}
